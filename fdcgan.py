@@ -23,7 +23,7 @@ def weights_init_normal(m):
         torch.nn.init.constant_(m.bias.data, 0.0)
 
 class Generator(nn.Module):
-    def __init__(self, img_shape, latent_dim):
+    def __init__(self, img_shape):
         super(Generator, self).__init__()
         channels = img_shape[0]
         img_size = img_shape[1]
@@ -56,6 +56,8 @@ class Discriminator(nn.Module):
         super(Discriminator, self).__init__()
         channels = img_shape[0]
         img_size = img_shape[1]
+
+        self.output_shape = [1]
 
         def discriminator_block(in_filters, out_filters, bn=True):
             block = [nn.Conv2d(in_filters, out_filters, kernel_size=3, stride=2, padding=1), nn.LeakyReLU(0.2, inplace=True), nn.Dropout2d(0.25)]

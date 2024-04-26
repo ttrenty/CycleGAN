@@ -4,7 +4,7 @@ if [ -d "./datasets/apple2orange64" ]; then
 fi
 
 FILE=apple2orange
-URL="https://drive.google.com/uc?export=download&id=1Xa9HtO4H76fDz85Lxipjm0rzXjLMdI4C" # apple2orange 64x64
+URL="https://drive.google.com/uc?export=download&id=1GSpQs_9hqCcXimYfVcbNDnkJ6K09Sywj" # apple2orange 64x64
 ZIP_FILE=./datasets/$FILE.zip
 TARGET_DIR=./datasets/$FILE/
 wget -N $URL -O $ZIP_FILE
