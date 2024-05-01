@@ -1,9 +1,4 @@
+numpy==1.24.4
+pillow==10.3.0
 torch>=0.4.0
-torchvision
-matplotlib
-numpy
-scipy
-pillow
-urllib3
-scikit-image
-PIL
+torchvision==0.18.0

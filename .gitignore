@@ -3,6 +3,7 @@ images*/
 datasets/
 data/
 saved_models/
+venv2/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
