@@ -27,3 +27,13 @@ class Generator(nn.Module):
         img = self.model(z)
         img = img.view(img.size(0), *self.img_shape) # unpacking the tuple self.img_shape
         return img
+    
+if __name__ == '__main__':
+    # Creating an instance of the Generator
+    img_shape = (1, 28, 28)  # Example shape
+    latent_dim = 100  # Example latent dimension size
+    generator = Generator(img_shape, latent_dim)
+
+    # Counting the number of parameters
+    num_params = sum(p.numel() for p in generator.parameters() if p.requires_grad)
+    print("Number of parameters in the Generator:", num_params)
