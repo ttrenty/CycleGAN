@@ -14,7 +14,7 @@ from PIL import Image
 
 
 class BinaryClassificationImageDataset(Dataset):
-    def __init__(self, root, transformations=None, mode="train"):
+    def __init__(self, root, transformations, mode="train"):
         self.transform = transforms.Compose(transformations)
 
         self.files_A = sorted(glob.glob(os.path.join(root, mode, "A", "*.*")))
