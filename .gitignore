@@ -4,6 +4,7 @@ datasets/
 data/
 saved_models/
 venv2/
+inferences/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

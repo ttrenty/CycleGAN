@@ -56,7 +56,7 @@ def train(model, device, train_data, nb_epochs, batch_size, learning_rate):
         epoch_loss = running_loss / len(train_data)
         epoch_values.append(epoch)
         loss_values.append(epoch_loss)
-        if epoch % 10 == 0:
-            print(f'[epoch {epoch}] epoch loss = {epoch_loss:.4f}')
+        
+        print(f'[epoch {epoch}] epoch loss = {epoch_loss:.4f}', end='\r')
 
     return epoch_values, loss_values
